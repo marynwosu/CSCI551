@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAtom } from 'jotai';
 import Link from 'next/link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import CloseBtnSVG from '../svgComps/CloseBtnSVG';
 import ArrowSVG from '../svgComps/ArrowSVG';
 import atoms from '../../util/atoms';

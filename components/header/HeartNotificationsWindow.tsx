@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { useAtom } from 'jotai';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import atoms, { heartDetails } from '../../util/atoms';
 import PostPopUp from '../PostPopUp';

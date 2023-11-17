@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { useAtom } from 'jotai';
 import Link from 'next/link';
 import atoms from '../../util/atoms';

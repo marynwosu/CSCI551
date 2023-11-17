@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { notificationTypes } from '../../util/atoms';
 import ProfilePicSVG from '../svgComps/ProfilePicSVG';
 import SpinnerSVG from '../svgComps/SpinnerSVG';

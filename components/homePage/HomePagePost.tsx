@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { useAtom } from 'jotai';
 import Link from 'next/link';
 import PostPopUp from '../PostPopUp';
