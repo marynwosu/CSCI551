@@ -16,7 +16,7 @@ function UserSuggestions() {
     <div className="mt-6 hidden max-w-[320px] flex-grow lg:block">
       <div className="mt-5 flex items-center justify-between">
         <div className="flex items-center">
-          <Link href={`/${userDetails.displayName}`}>
+          <Link href={`/${userDetails.displayName}`} legacyBehavior>
 
             {userDetails.photoURL ? (
               <Image
@@ -33,7 +33,7 @@ function UserSuggestions() {
             )}
 
           </Link>
-          <Link href={`/${userDetails.displayName}`}>
+          <Link href={`/${userDetails.displayName}`} legacyBehavior>
 
             <p className="ml-5 cursor-pointer text-sm font-semibold">
               {userDetails.displayName}
@@ -41,7 +41,7 @@ function UserSuggestions() {
 
           </Link>
         </div>
-        <Link href={`/${userDetails.displayName}`}>
+        <Link href={`/${userDetails.displayName}`} legacyBehavior>
 
           <p className="cursor-pointer text-xs font-semibold text-[#0095f6]">
             Your profile
@@ -52,7 +52,7 @@ function UserSuggestions() {
       <div className="pt-5">
         <div className="flex items-center justify-between pb-2">
           <p className="text-sm font-semibold text-[#818181]">User Spotlight</p>
-          <Link href="/Explore">
+          <Link href="/Explore" legacyBehavior>
 
             <p className="cursor-pointer text-xs font-semibold">
               See all users
@@ -71,7 +71,7 @@ function UserSuggestions() {
             >
               <div className="flex items-center gap-2">
                 {spotlightUserDetails.avatarURL?.length !== 0 ? (
-                  (<Link href={`/${spotlightUserDetails.username}`}>
+                  (<Link href={`/${spotlightUserDetails.username}`} legacyBehavior>
 
                     <Image
                       className="h-8 w-8 cursor-pointer select-none rounded-full object-cover"
@@ -83,7 +83,7 @@ function UserSuggestions() {
 
                   </Link>)
                 ) : (
-                  (<Link href={`/${spotlightUserDetails.username}`}>
+                  (<Link href={`/${spotlightUserDetails.username}`} legacyBehavior>
 
                     <div className="h-8 w-8">
                       <ProfilePicSVG strokeWidth="2" />
@@ -99,7 +99,7 @@ function UserSuggestions() {
                   </Link>)
                 )}
                 <div>
-                  <Link href={`/${spotlightUserDetails.username}`}>
+                  <Link href={`/${spotlightUserDetails.username}`} legacyBehavior>
 
                     <p className="cursor-pointer text-xs font-semibold">
                       {spotlightUserDetails.username}
@@ -114,7 +114,7 @@ function UserSuggestions() {
                   </p>
                 </div>
               </div>
-              <Link href={`/${spotlightUserDetails.username}`}>
+              <Link href={`/${spotlightUserDetails.username}`} legacyBehavior>
 
                 <p className="cursor-pointer text-xs font-semibold text-[#0095f6]">
                   Profile

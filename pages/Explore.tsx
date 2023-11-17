@@ -1,6 +1,6 @@
 import { useAtom } from 'jotai';
 import { NextPage } from 'next';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -48,7 +48,7 @@ const Explore: NextPage = () => {
             key={userDocs.userId}
           >
             <div className="flex items-center gap-3">
-              <Link href={userDocs.username!}>
+              <Link href={userDocs.username!} legacyBehavior>
 
                 {userDocs.avatarURL ? (
                   <div>
@@ -68,7 +68,7 @@ const Explore: NextPage = () => {
 
               </Link>
               <div>
-                <Link href={userDocs.username!}>
+                <Link href={userDocs.username!} legacyBehavior>
 
                   <p className="cursor-pointer text-sm font-semibold">
                     {userDocs.username}
@@ -87,7 +87,7 @@ const Explore: NextPage = () => {
                 </p>
               </div>
             </div>
-            <Link href={userDocs.username!}>
+            <Link href={userDocs.username!} legacyBehavior>
 
               <p className="cursor-pointer pr-5 text-xs font-semibold text-[#0095f6]">
                 Profile

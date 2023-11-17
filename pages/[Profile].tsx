@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useAtom } from 'jotai';
 import Link from 'next/link';
@@ -125,7 +125,7 @@ const Profile: NextPage = () => {
                 ''
               ) : (
                 <div className="flex flex-row items-center pb-2 sm:pl-7 sm:pb-0">
-                  <Link href="/Inbox">
+                  <Link href="/Inbox" legacyBehavior>
 
                     <p className="mr-2  rounded-[4px] border border-stone-300 py-1 px-2 text-sm font-semibold dark:border-stone-700">
                       Message

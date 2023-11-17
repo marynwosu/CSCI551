@@ -47,7 +47,7 @@ function Header({ page }: { page: string }) {
     <div className="sticky top-0 z-50 border-b border-stone-300 bg-white dark:border-stone-700 dark:bg-[#1c1c1c] dark:text-slate-100">
       <div className=" flex h-[60px] items-center justify-between px-[5px] sm:px-[20px] lg:justify-center ">
         <div className="flex h-[60px] w-[330px] items-center ">
-          <Link href="/" className="w-full max-w-[103px] ">
+          <Link href="/" className="w-full max-w-[103px] " legacyBehavior>
 
             <div className="w-full max-w-[103px] cursor-pointer select-none">
               <InstagramSVG disableDarkMode={false} white={false} />
@@ -81,12 +81,12 @@ function Header({ page }: { page: string }) {
           </div>
         </div>
         <div className="relative flex items-center pl-[15px] lg:pl-[100px]">
-          <Link href="/">
+          <Link href="/" legacyBehavior>
 
             <HomeSVG page={page} />
 
           </Link>
-          <Link href="/Inbox">
+          <Link href="/Inbox" legacyBehavior>
 
             <div className="relative">
               <IndexSVG page={page} />
@@ -157,7 +157,7 @@ function Header({ page }: { page: string }) {
                 avatarDropDown ? 'show' : 'hidden'
               } absolute right-[-20px] top-10 z-50 w-[230px] items-center justify-start bg-white text-sm shadow-[-2px_-2px_10px_2px_rgba(0,0,0,0.1)] dark:bg-[#131313] dark:shadow-[-2px_-2px_5px_2px_rgba(0,0,0,0.7)]`}
             >
-              <Link href={`/${userDetails.displayName}`}>
+              <Link href={`/${userDetails.displayName}`} legacyBehavior>
 
                 <div className="flex items-center py-2 px-4 hover:bg-[#f8f8f8] dark:hover:bg-[#080808]">
                   <div className="h-4 w-4">
@@ -167,7 +167,7 @@ function Header({ page }: { page: string }) {
                 </div>
 
               </Link>
-              <Link href="/Explore">
+              <Link href="/Explore" legacyBehavior>
 
                 <div className="flex items-center py-2 px-4 hover:bg-[#f8f8f8] dark:hover:bg-[#080808]">
                   <ExploreSVG />

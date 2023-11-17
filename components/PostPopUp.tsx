@@ -64,7 +64,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
         </div>
         <div className="flex h-[50%] w-full flex-col bg-white dark:bg-[#1c1c1c] sm:h-full lg:w-[50%]">
           <div className="flex items-center justify-start gap-3 border-b border-stone-200 py-1 px-4 dark:border-stone-700 sm:p-4 ">
-            <Link href={postUserDetails.username}>
+            <Link href={postUserDetails.username} legacyBehavior>
 
               {!postUserDetails.avatarURL ? (
                 <div className="h-8 w-8">
@@ -81,7 +81,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
               )}
 
             </Link>
-            <Link href={postUserDetails.username}>
+            <Link href={postUserDetails.username} legacyBehavior>
 
               <p className="cursor-pointer text-sm font-semibold">
                 {postUserDetails.username}
@@ -101,7 +101,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                     className="flex px-4 py-1 sm:p-4"
                   >
                     <div className="flex-shrink-0">
-                      <Link href={`/${commentInfo.username}`}>
+                      <Link href={`/${commentInfo.username}`} legacyBehavior>
 
                         {!commentInfo.avatarURL ? (
                           <div className="mr-4 h-8 w-8">
@@ -121,7 +121,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                     </div>
                     <div>
                       <p className="">
-                        <Link href={`/${commentInfo.username}`}>
+                        <Link href={`/${commentInfo.username}`} legacyBehavior>
 
                           <b>{commentInfo.username}</b>
 
@@ -195,7 +195,7 @@ function PostPopUp({ postInformation, postUserDetails, setPostPopUp }: Props) {
                   Liked by{' '}
                   <b>
                     {postInformation.likes.length > 0 ? (
-                      <Link href={postInformation.likes[0]}>
+                      <Link href={postInformation.likes[0]} legacyBehavior>
                         {postInformation.likes[0]}
                       </Link>
                     ) : (

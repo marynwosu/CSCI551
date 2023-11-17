@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import TextareaAutosize from 'react-textarea-autosize';
 import { useAtom } from 'jotai';
@@ -56,7 +56,7 @@ function ChatRoom({ chatRoomID, userID, activeChat, activeChatId }: Props) {
             </picture>
           </div>
         ) : (
-          (<Link href={`/${chatName}`}>
+          (<Link href={`/${chatName}`} legacyBehavior>
 
             <Image
               className="h-7 w-7 cursor-pointer select-none rounded-full object-cover"
@@ -68,7 +68,7 @@ function ChatRoom({ chatRoomID, userID, activeChat, activeChatId }: Props) {
 
           </Link>)
         )}
-        <Link href={`/${chatName}`}>
+        <Link href={`/${chatName}`} legacyBehavior>
 
           <h1 className="cursor-pointer">{chatName}</h1>
 
@@ -227,7 +227,7 @@ function ChatIcon({
           <ProfilePicSVG strokeWidth="1.3" />
         </div>
       ) : (
-        (<Link href={`/${chatName}`}>
+        (<Link href={`/${chatName}`} legacyBehavior>
 
           <Image
             className="h-6 w-6 cursor-pointer select-none rounded-full object-cover"

@@ -48,7 +48,7 @@ const HomePagePost = ({ username, index }: Props) => {
             ''
           )}
           <div className="ml-3 flex items-center py-3">
-            <Link href={username}>
+            <Link href={username} legacyBehavior>
 
               {postDetails.comments[0].avatarURL ? (
                 <Image
@@ -65,7 +65,7 @@ const HomePagePost = ({ username, index }: Props) => {
               )}
 
             </Link>
-            <Link href={username}>
+            <Link href={username} legacyBehavior>
 
               <p className="ml-4 cursor-pointer">
                 {postDetails.comments[0].username}
@@ -170,7 +170,7 @@ const HomePagePost = ({ username, index }: Props) => {
                   Liked by{' '}
                   <b>
                     {postDetails.likes.length > 0 ? (
-                      <Link href={postDetails.likes[0]}>
+                      <Link href={postDetails.likes[0]} legacyBehavior>
                         {postDetails.likes[0]}
                       </Link>
                     ) : (

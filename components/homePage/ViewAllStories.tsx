@@ -109,7 +109,7 @@ function ViewAllStories({
                       positionIndex={positionIndex}
                     />
                     <div className="absolute top-9 left-0 z-[1000] ml-5 flex items-center gap-2 text-sm text-white">
-                      <Link href={userName}>
+                      <Link href={userName} legacyBehavior>
 
                         {stories[`${userName}Photo`].length === 0 ? (
                           <div className="h-8 w-8">
@@ -126,7 +126,7 @@ function ViewAllStories({
                         )}
 
                       </Link>
-                      <Link href={userName}>
+                      <Link href={userName} legacyBehavior>
 
                         <p className="cursor-pointer">{userName}</p>
 

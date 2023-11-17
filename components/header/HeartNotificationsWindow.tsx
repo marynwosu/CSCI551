@@ -64,7 +64,7 @@ export default function HeartNotificationsWindow() {
                   className="flex items-center gap-2 py-4 px-2 text-sm sm:px-6"
                   key={`hearts${index}`}
                 >
-                  <Link href={details.username!}>
+                  <Link href={details.username!} legacyBehavior>
 
                     {userNotifications.heartNotifications![index]
                       .userPhoto ? (
@@ -86,7 +86,7 @@ export default function HeartNotificationsWindow() {
 
                   </Link>
                   <div className="flex flex-col sm:flex-row">
-                    <Link href={details.username!}>
+                    <Link href={details.username!} legacyBehavior>
 
                       <p className="font-semibold">{details.username}</p>
 
