@@ -33,7 +33,7 @@ function HeaderSearchWindow({
               userDetails.map((details, index) => (
                 // item will not be deleted or updated so it is okay to use index as a key
                 // eslint-disable-next-line react/no-array-index-key
-                <Link href={`/${details.username}`} key={index}>
+                <Link href={`/${details.username}`} key={index} legacyBehavior>
                   <div className="flex cursor-pointer items-center py-3 pl-5 hover:bg-[#f8f8f8] dark:hover:bg-[#131313]">
                     {' '}
                     {details.avatarURL ? (

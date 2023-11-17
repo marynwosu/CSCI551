@@ -49,31 +49,31 @@ const Explore: NextPage = () => {
           >
             <div className="flex items-center gap-3">
               <Link href={userDocs.username!}>
-                <a>
-                  {userDocs.avatarURL ? (
-                    <div>
-                      <Image
-                        className="h-11 w-11 cursor-pointer select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#313131]"
-                        src={userDocs.avatarURL}
-                        alt="avatar"
-                        width="44"
-                        height="44"
-                      />
-                    </div>
-                  ) : (
-                    <div className="h-11 w-11">
-                      <ProfilePicSVG strokeWidth="1" />
-                    </div>
-                  )}
-                </a>
+
+                {userDocs.avatarURL ? (
+                  <div>
+                    <Image
+                      className="h-11 w-11 cursor-pointer select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#313131]"
+                      src={userDocs.avatarURL}
+                      alt="avatar"
+                      width="44"
+                      height="44"
+                    />
+                  </div>
+                ) : (
+                  <div className="h-11 w-11">
+                    <ProfilePicSVG strokeWidth="1" />
+                  </div>
+                )}
+
               </Link>
               <div>
                 <Link href={userDocs.username!}>
-                  <a>
-                    <p className="cursor-pointer text-sm font-semibold">
-                      {userDocs.username}
-                    </p>
-                  </a>
+
+                  <p className="cursor-pointer text-sm font-semibold">
+                    {userDocs.username}
+                  </p>
+
                 </Link>
                 <p className="hidden text-xs text-[#818181] sm:block">
                   Followed by {userDocs.followers!.length}{' '}
@@ -88,11 +88,11 @@ const Explore: NextPage = () => {
               </div>
             </div>
             <Link href={userDocs.username!}>
-              <a>
-                <p className="cursor-pointer pr-5 text-xs font-semibold text-[#0095f6]">
-                  Profile
-                </p>
-              </a>
+
+              <p className="cursor-pointer pr-5 text-xs font-semibold text-[#0095f6]">
+                Profile
+              </p>
+
             </Link>
           </div>
         ))}

@@ -126,11 +126,11 @@ const Profile: NextPage = () => {
               ) : (
                 <div className="flex flex-row items-center pb-2 sm:pl-7 sm:pb-0">
                   <Link href="/Inbox">
-                    <a>
-                      <p className="mr-2  rounded-[4px] border border-stone-300 py-1 px-2 text-sm font-semibold dark:border-stone-700">
-                        Message
-                      </p>
-                    </a>
+
+                    <p className="mr-2  rounded-[4px] border border-stone-300 py-1 px-2 text-sm font-semibold dark:border-stone-700">
+                      Message
+                    </p>
+
                   </Link>
                   <div className=" overflow-hidden rounded-[4px] text-sm font-semibold">
                     {userNotifications.following?.includes(

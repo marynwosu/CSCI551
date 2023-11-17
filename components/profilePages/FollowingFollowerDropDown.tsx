@@ -61,34 +61,34 @@ export default function FollowingFollowerDropDown({
               {usersInfo.map((userDetails) => (
                 <div className="flex items-center" key={userDetails.username}>
                   <Link href={`/${userDetails.username}`}>
-                    <a>
-                      {userDetails.avatarURL.length !== 0 ? (
-                        <Image
-                          className="h-11 w-11 cursor-pointer select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#313131]"
-                          src={userDetails.avatarURL}
-                          alt="avatar"
-                          width="44"
-                          height="44"
-                        />
-                      ) : (
-                        <div className="h-11 w-11">
-                          <ProfilePicSVG strokeWidth="1.5" />
-                        </div>
-                      )}
-                    </a>
+
+                    {userDetails.avatarURL.length !== 0 ? (
+                      <Image
+                        className="h-11 w-11 cursor-pointer select-none rounded-full bg-[#ebebeb] object-cover dark:bg-[#313131]"
+                        src={userDetails.avatarURL}
+                        alt="avatar"
+                        width="44"
+                        height="44"
+                      />
+                    ) : (
+                      <div className="h-11 w-11">
+                        <ProfilePicSVG strokeWidth="1.5" />
+                      </div>
+                    )}
+
                   </Link>
                   <Link href={`/${userDetails.username}`}>
-                    <a>
-                      <p className="pl-3 text-sm ">{userDetails.username}</p>
-                    </a>
+
+                    <p className="pl-3 text-sm ">{userDetails.username}</p>
+
                   </Link>
                   <div className="ml-auto">
                     <Link href={`/${userDetails.username}`}>
-                      <a>
-                        <p className="cursor-pointer text-xs font-semibold text-[#0095f6]">
-                          Profile
-                        </p>
-                      </a>
+
+                      <p className="cursor-pointer text-xs font-semibold text-[#0095f6]">
+                        Profile
+                      </p>
+
                     </Link>
                   </div>
                 </div>

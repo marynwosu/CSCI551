@@ -56,22 +56,22 @@ function ChatRoom({ chatRoomID, userID, activeChat, activeChatId }: Props) {
             </picture>
           </div>
         ) : (
-          <Link href={`/${chatName}`}>
-            <a>
-              <Image
-                className="h-7 w-7 cursor-pointer select-none rounded-full object-cover"
-                src={avatarURL}
-                alt="avatar"
-                width="28"
-                height="28"
-              />
-            </a>
-          </Link>
+          (<Link href={`/${chatName}`}>
+
+            <Image
+              className="h-7 w-7 cursor-pointer select-none rounded-full object-cover"
+              src={avatarURL}
+              alt="avatar"
+              width="28"
+              height="28"
+            />
+
+          </Link>)
         )}
         <Link href={`/${chatName}`}>
-          <a>
-            <h1 className="cursor-pointer">{chatName}</h1>
-          </a>
+
+          <h1 className="cursor-pointer">{chatName}</h1>
+
         </Link>
       </div>
       <div
@@ -227,17 +227,17 @@ function ChatIcon({
           <ProfilePicSVG strokeWidth="1.3" />
         </div>
       ) : (
-        <Link href={`/${chatName}`}>
-          <a>
-            <Image
-              className="h-6 w-6 cursor-pointer select-none rounded-full object-cover"
-              src={photoURL}
-              alt="avatar"
-              height="24"
-              width="24"
-            />
-          </a>
-        </Link>
+        (<Link href={`/${chatName}`}>
+
+          <Image
+            className="h-6 w-6 cursor-pointer select-none rounded-full object-cover"
+            src={photoURL}
+            alt="avatar"
+            height="24"
+            width="24"
+          />
+
+        </Link>)
       )}
     </div>
   );

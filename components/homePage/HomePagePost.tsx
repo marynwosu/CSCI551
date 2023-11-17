@@ -49,28 +49,28 @@ const HomePagePost = ({ username, index }: Props) => {
           )}
           <div className="ml-3 flex items-center py-3">
             <Link href={username}>
-              <a>
-                {postDetails.comments[0].avatarURL ? (
-                  <Image
-                    className="h-8 w-8 cursor-pointer select-none rounded-full object-cover"
-                    src={postDetails.comments[0].avatarURL}
-                    alt="avatar"
-                    width="32"
-                    height="32"
-                  />
-                ) : (
-                  <div className="h-8 w-8 cursor-pointer select-none rounded-full">
-                    <ProfilePicSVG strokeWidth="1" />
-                  </div>
-                )}
-              </a>
+
+              {postDetails.comments[0].avatarURL ? (
+                <Image
+                  className="h-8 w-8 cursor-pointer select-none rounded-full object-cover"
+                  src={postDetails.comments[0].avatarURL}
+                  alt="avatar"
+                  width="32"
+                  height="32"
+                />
+              ) : (
+                <div className="h-8 w-8 cursor-pointer select-none rounded-full">
+                  <ProfilePicSVG strokeWidth="1" />
+                </div>
+              )}
+
             </Link>
             <Link href={username}>
-              <a>
-                <p className="ml-4 cursor-pointer">
-                  {postDetails.comments[0].username}
-                </p>
-              </a>
+
+              <p className="ml-4 cursor-pointer">
+                {postDetails.comments[0].username}
+              </p>
+
             </Link>
           </div>
           <div
@@ -171,7 +171,7 @@ const HomePagePost = ({ username, index }: Props) => {
                   <b>
                     {postDetails.likes.length > 0 ? (
                       <Link href={postDetails.likes[0]}>
-                        <a>{postDetails.likes[0]}</a>
+                        {postDetails.likes[0]}
                       </Link>
                     ) : (
                       ''

@@ -65,31 +65,31 @@ export default function HeartNotificationsWindow() {
                   key={`hearts${index}`}
                 >
                   <Link href={details.username!}>
-                    <a>
-                      {userNotifications.heartNotifications![index]
-                        .userPhoto ? (
-                        <Image
-                          className="mr-2 h-11 w-11 cursor-pointer select-none rounded-full  object-cover "
-                          src={
-                            userNotifications.heartNotifications![index]
-                              .userPhoto!
-                          }
-                          alt="avatar"
-                          width="44"
-                          height="44"
-                        />
-                      ) : (
-                        <div className="mr-2 h-11 w-11">
-                          <ProfilePicSVG strokeWidth="1.5" />
-                        </div>
-                      )}
-                    </a>
+
+                    {userNotifications.heartNotifications![index]
+                      .userPhoto ? (
+                      <Image
+                        className="mr-2 h-11 w-11 cursor-pointer select-none rounded-full  object-cover "
+                        src={
+                          userNotifications.heartNotifications![index]
+                            .userPhoto!
+                        }
+                        alt="avatar"
+                        width="44"
+                        height="44"
+                      />
+                    ) : (
+                      <div className="mr-2 h-11 w-11">
+                        <ProfilePicSVG strokeWidth="1.5" />
+                      </div>
+                    )}
+
                   </Link>
                   <div className="flex flex-col sm:flex-row">
                     <Link href={details.username!}>
-                      <a>
-                        <p className="font-semibold">{details.username}</p>
-                      </a>
+
+                      <p className="font-semibold">{details.username}</p>
+
                     </Link>
                     <p className="text-xs sm:pl-1 sm:text-sm">{details.text}</p>
                   </div>

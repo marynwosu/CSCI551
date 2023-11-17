@@ -110,26 +110,26 @@ function ViewAllStories({
                     />
                     <div className="absolute top-9 left-0 z-[1000] ml-5 flex items-center gap-2 text-sm text-white">
                       <Link href={userName}>
-                        <a>
-                          {stories[`${userName}Photo`].length === 0 ? (
-                            <div className="h-8 w-8">
-                              <ProfilePicSVG strokeWidth="1" />
-                            </div>
-                          ) : (
-                            <Image
-                              className="relative z-[1000] h-8 w-8 cursor-pointer select-none rounded-full bg-[#3f3f3f] object-cover"
-                              src={stories[`${userName}Photo`]}
-                              alt="avatar"
-                              height="32"
-                              width="32"
-                            />
-                          )}
-                        </a>
+
+                        {stories[`${userName}Photo`].length === 0 ? (
+                          <div className="h-8 w-8">
+                            <ProfilePicSVG strokeWidth="1" />
+                          </div>
+                        ) : (
+                          <Image
+                            className="relative z-[1000] h-8 w-8 cursor-pointer select-none rounded-full bg-[#3f3f3f] object-cover"
+                            src={stories[`${userName}Photo`]}
+                            alt="avatar"
+                            height="32"
+                            width="32"
+                          />
+                        )}
+
                       </Link>
                       <Link href={userName}>
-                        <a>
-                          <p className="cursor-pointer">{userName}</p>
-                        </a>
+
+                        <p className="cursor-pointer">{userName}</p>
+
                       </Link>
                     </div>
                   </div>
